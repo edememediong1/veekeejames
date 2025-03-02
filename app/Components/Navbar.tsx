@@ -47,10 +47,10 @@ const Navbar = () => {
                 <li>
                     <Link href="/">HOME</Link>
                 </li>
-                <li>
+                <li className='nav-bride'>
                     <span>BRIDE</span>
-                    <ul>
-                        <li>
+                    <ul className='bride-dropdown'>
+                        <li className=''>
                             <span>COLLECTIONS <Image src="right.svg" alt="right" width={30} height={30}/></span>
                             <div>
                                 <p><Link href='/gutsy-collection'>THE GUTSY COLLECTION LOOKBOOK</Link></p>
