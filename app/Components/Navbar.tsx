@@ -43,7 +43,7 @@ const Navbar = () => {
             <Link href="/">
                 <Image src={logo} alt="Logo" className='w-[250px] '/>
             </Link>
-            <ul className='hidden md:flex space-x-5 font-semibold text-[16px]'>
+            <ul className='hidden md:flex space-x-5 font-semibold text-[14px] text-[#353535]'>
                 <li>
                     <Link href="/">HOME</Link>
                 </li>
