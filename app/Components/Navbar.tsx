@@ -12,7 +12,7 @@ const Navbar = () => {
         setMenuActive( menuActive== false ? true: false)
     }
   return (
-    <nav className='flex bg-[#fff9f2] w-full  justify-start md:justify-center items-center'>
+    <nav className='flex bg-[#fff9f2] w-full  justify-start md:justify-center items-center md:h-[20vh]'>
         
         <div className=' md:hidden relative'>
             <Image src={menuActive ? 'cancel.svg': 'menu.svg'} alt="toggle" onClick={handleToggle} width={50} height={50}/>
@@ -39,17 +39,17 @@ const Navbar = () => {
         </div>
         
 
-        <div className=' md:flex md:flex-col md:justify-center md:items-center'>
+        <div className=' md:flex md:flex-col md:justify-center md:items-center md:gap-6'>
             <Link href="/">
                 <Image src={logo} alt="Logo" className='w-[250px] '/>
             </Link>
-            <ul className='hidden md:flex space-x-2'>
+            <ul className='hidden md:flex space-x-5 font-semibold text-[16px]'>
                 <li>
                     <Link href="/">HOME</Link>
                 </li>
                 <li className='nav-bride'>
-                    <span>BRIDE</span>
-                    <ul className='bride-dropdown'>
+                    <Link href='/'>BRIDE</Link>
+                    {/* <ul className='bride-dropdown'>
                         <li className=''>
                             <span>COLLECTIONS <Image src="right.svg" alt="right" width={30} height={30}/></span>
                             <div>
@@ -71,8 +71,8 @@ const Navbar = () => {
                             </div>
 
                         </li>
-                    </ul>
-                </li>
+                    </ul>*/} 
+                </li> 
                 <li>
                     <Link href="/non-bridals">NON BRIDALS</Link>
                 </li>
