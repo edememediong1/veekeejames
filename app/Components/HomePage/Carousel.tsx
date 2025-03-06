@@ -81,13 +81,14 @@ const Carousel = () => {
   }
 
   return (
-    <article>
-      <div className=" w-[100%] md:w-[84%] px-4 mt-5 m-auto">
+    <article className="my-10">
+      <h2 className="text-[1.9rem] font-medium text-center">BESPOKE WEARS FOR ANY OCCASSION</h2>
+      <div className=" w-[100%] md:w-[95%] px-4 mt-5 m-auto">
       <Slider {...settings} className="mb-8">
         {images.map((image, index) => (
           <div key={index} className="">
             <div
-              className="relative h-[480px] cursor-pointer transition-transform hover:scale-[1.02] w-[320px]"
+              className="relative h-[480px] cursor-pointer transition-transform hover:scale-[1.02] "
               onClick={() => openFullscreen(image.src)}
             >
               <Image
