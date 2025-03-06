@@ -81,12 +81,13 @@ const Carousel = () => {
   }
 
   return (
-    <div className=" w-full px-4 m-t-5">
+    <article>
+      <div className=" w-[100%] md:w-[84%] px-4 mt-5 m-auto">
       <Slider {...settings} className="mb-8">
         {images.map((image, index) => (
           <div key={index} className="">
             <div
-              className=" h-[500px] cursor-pointer transition-transform hover:scale-[1.02] ew-[320px]"
+              className="relative h-[480px] cursor-pointer transition-transform hover:scale-[1.02] w-[320px]"
               onClick={() => openFullscreen(image.src)}
             >
               <Image
@@ -131,6 +132,8 @@ const Carousel = () => {
         </div>
       )}
     </div>
+    </article>
+    
   )
 }
 
