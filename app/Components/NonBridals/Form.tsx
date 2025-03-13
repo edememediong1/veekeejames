@@ -1,5 +1,6 @@
 import React from 'react'
 
+
 const Form = () => {
   return (
     <form className='flex flex-col gap-5 w-full md:w-4/5 p-5'>
@@ -59,6 +60,8 @@ const Form = () => {
           <label htmlFor="address" className='font-bold'>Any other information you might want to add?</label>
           <textarea id='address' name='address' className='outline-none border ' rows={4}></textarea>
         </div>
+
+        <button type='submit' className='p-2 border w-[100px] bg-[#ebe9e9]'>Submit</button>
 
     </form>
   )
