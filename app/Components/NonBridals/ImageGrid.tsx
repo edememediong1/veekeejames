@@ -26,7 +26,7 @@ const images = [
 
 const ImageGrid = () => {
   return (
-    <div className="w-[90%] md:w-5/6 grid md:grid-cols-2 lg:grid-cols-3 gap-1">
+    <div className="w-[90%] md:w-5/6 grid md:grid-cols-2 lg:grid-cols-3 gap-1 my-[20vh]">
         {images.map((image, index) => (
                 <div key={index}>
                     <div className="relative h-[450px] cursor-pointer transition-transform hover:scale-[1.02] ">

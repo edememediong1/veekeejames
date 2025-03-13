@@ -21,7 +21,7 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-@layer base{
+@layer base {
    .header{
      color: white;
      background-position-x:left;
