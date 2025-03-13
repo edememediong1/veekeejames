@@ -6,7 +6,7 @@ import ImageGrid from '../Components/NonBridals/ImageGrid'
 const page = () => {
   return (
     <main className='w-full'>
-        <div className="h-[70vh] md:h-[400px] lg:h-[100vh] bg-[#0c0c0c] w-full flex justify-center items-center p-5">
+        <div className="h-[60vh] md:h-[300px] lg:h-[80vh] bg-[#0c0c0c] w-full flex justify-center items-center p-5">
             <h1 className='text-white text-3xl text-center font-medium'>NON-BRIDAL DRESSES</h1>
         </div>
         <section className='flex flex-col justify-center items-center mt-10'>
