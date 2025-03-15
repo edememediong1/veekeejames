@@ -3,7 +3,7 @@ import React from 'react'
 
 const Form = () => {
   return (
-    <form className='flex flex-col gap-5 w-full md:w-4/5 p-5'>
+    <form className='flex flex-col gap-5 w-full md:w-4/5 p-5 text-[13px] md:text-[1rem]'>
         <div className='flex flex-col gap-2'>
             <label htmlFor="name" className='font-bold'>Name<span className='text-red-600'>*</span></label>
             <input type='text' name="name" placeholder='Flora Gadus'  className='border p-2'/>
