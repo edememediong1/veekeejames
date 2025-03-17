@@ -5,7 +5,7 @@ export interface dataType {
     category: string
 }
 
-export const data = [
+export const images = [
     {
        src: "https://veekeejames.com/wp-content/uploads/2023/12/IMG_1963-1.jpg",
        id: 1,

@@ -1,5 +1,6 @@
 import React from 'react'
-
+import ImageGrid from '../Components/Collections/ImageGrid'
+import { images } from '../lib/data'
 
 const page = () => {
   return (
@@ -10,7 +11,7 @@ const page = () => {
             </article>
         </section>
         <section>
-
+            <ImageGrid images={images}/>
         </section>
     </div>
   )
