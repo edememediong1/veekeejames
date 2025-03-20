@@ -88,9 +88,9 @@ const Navbar = () => {
             {menuActive && (
                 <ul className='absolute w-screen bg-[#fff9f2] text-[13px] px-4 py-4 border-t mt-3.5'>
                    <li>
-                    {/* {navItems.map((item) => (
+                    {navItems.map((item) => (
                         <NavItemMobile key={item.title} item={item} />
-                    ))} */}
+                    ))}
                    </li>
                 </ul>
             )
