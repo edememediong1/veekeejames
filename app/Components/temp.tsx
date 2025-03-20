@@ -5,62 +5,6 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { useState } from 'react'
 
-
-type NavItem = {
-    title: string,
-    href: string,
-    children?: NavItem[]
-}
-
-const navItems: NavItem[] = [
-    {
-        title: "HOME",
-        href: "/" 
-    },
-    {
-       title: "BRIDE",
-       href: "#",
-       children: [
-        {
-            title: "COLLECTIONS",
-            href: "#",
-            children: [
-                {
-                    title: "THE GUTSY COLLECTION LOOKBOOK",
-                    href: "/collections"
-                }
-            ]
-        },
-        {
-            title: "THE PROCESS",
-            href: "#",
-            children: [
-                {
-                    title: "BESPOKE",
-                    href: "/bespoke"
-                },
-                {
-                    title: "MADE TO ORDER",
-                    href: "/made-to-order"
-                }
-            ]
-        },
-        {
-            title: "ORDER OUR COLLECTION",
-            href: "#",
-            children: [
-                {
-                    title: "MAKE AN ENQUIRY",
-                    href: "/make-an-enquiry"
-                }
-            ]
-        }
-       ]
-    }
-
-
-]
-
 const Navbar = () => {
     const [menuActive, setMenuActive] = useState(false)
 

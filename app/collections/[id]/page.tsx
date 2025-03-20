@@ -15,7 +15,7 @@ interface ImageDetailPageProp{
 const Page = async ({params} : ImageDetailPageProp) => {
 
   const param = await params
-  console.log(param)
+  // console.log(param)
   
   const image = await images.find((img) => img.id ==  param.id)
 
