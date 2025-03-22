@@ -84,7 +84,9 @@ const Navbar = () => {
     <nav className='h-[15vh] flex gap-10 bg-[#fff9f2] w-full  justify-start md:justify-center items-center md:h-[20vh]'>
         
         <div className=' md:hidden relative '>
-            <Image src={menuActive ? 'cancel.svg': 'menu.svg'} alt="toggle" onClick={handleToggle} width={35} height={35} className=''/>
+            <button>
+                {menuActive ? <X onClick={handleToggle} className='h-6 w-6'/> : <Menu onClick={handleToggle} className='h-6 w-6'/>}
+            </button>
             {menuActive && (
                 <ul className='absolute w-screen bg-[#fff9f2] text-[13px] px-4 py-4 border-t mt-3.5'>
                    <li>
@@ -168,6 +170,54 @@ function DropdownItem({item}: {item: NavItem}) {
                     </Link>
                 ))}
             </div>
+        </div>
+    )
+}
+
+
+function NavItemMobile({item}: {item: NavItem}){
+    const [isOpen, setIsOpen] = useState(false)
+    const [isNestedOpen, setIsNestedOpen] = useState<Record<string, boolean>>({})
+
+    if(!item.children){
+        return(
+            <Link
+                href={item.href}
+                className="block px-4 py-2 text-[12px] text-gray-700">
+                {item.title}
+            </Link>
+        )
+    }
+
+    return (
+        <div>
+            <button
+                className='flex w-full items-center justify-between rounded-md px-3 py-2 text-[12px]' 
+                onClick={() => setIsOpen(!isOpen)}
+                aria-expanded={isOpen}
+            >
+                {item.title}
+                <ChevronRight className={`h-3 w-3 transform ${isOpen ? 'rotate-90': ''}`}/>
+            </button>
+            {isOpen && (
+                <div className="ml-4 space-y-1 pl-4">
+                    {item.children.map((child) => {
+                        if(!child.children){
+                            return(
+                                <Link
+                                    key={child.title}
+                                    href={child.href}
+                                    className="block px-3 py-2 text-[12px] text-gray-700">
+                                    {child.title}
+                                </Link>
+                            )
+                        }
+
+                        return (
+                            <div key={child.title}
+                        )
+                    })}
+            )}
         </div>
     )
 }
