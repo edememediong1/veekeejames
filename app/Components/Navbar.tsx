@@ -4,7 +4,7 @@ import logo from "../../public/dolce-gabbana-1.svg"
 import Image from 'next/image'
 import Link from 'next/link'
 import { useState } from 'react'
-import { ChevronRight, Menu, X } from "lucide-react"
+import { ChevronDown, ChevronRight, Menu, X } from "lucide-react"
 
 
 type NavItem = {
@@ -214,9 +214,22 @@ function NavItemMobile({item}: {item: NavItem}){
                         }
 
                         return (
-                            <div key={child.title}
+                            <div key={child.title}>
+                                <button 
+                                    className='flex w-full items-center justify-between px-3 py-2 text-[12px]'
+                                    onClick={() => setIsNestedOpen({...isNestedOpen, [child.title]: !isNestedOpen[child.title]})}
+                                    aria-expanded={isNestedOpen[child.title]}
+                                >
+
+                                    {child.title}
+                                    <ChevronDown
+                                    
+                                    />
+                                </button>
+                            </div>
                         )
                     })}
+                </div>
             )}
         </div>
     )
