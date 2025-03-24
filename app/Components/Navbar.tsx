@@ -223,9 +223,22 @@ function NavItemMobile({item}: {item: NavItem}){
 
                                     {child.title}
                                     <ChevronDown
-                                    
+                                       className={`h-3 w-3 transition-transform`+ (isNestedOpen[child.title] ? "rotate-180": "") }
                                     />
                                 </button>
+                                {isNestedOpen[child.title]&& (
+                                    <div className="ml-4 space-y-1 border-l pl-4">
+                                        {child.children.map((nestedChild) => (
+                                            <Link
+                                                key={nestedChild.title}
+                                                href={nestedChild.href}
+                                                className="block px-3 py-2 text-[12px] text-gray-700"
+                                            >
+                                                {nestedChild.title}
+                                            </Link>
+                                        ))}
+                                    </div>
+                                )}
                             </div>
                         )
                     })}
