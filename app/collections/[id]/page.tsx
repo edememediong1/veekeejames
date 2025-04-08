@@ -23,9 +23,9 @@ const Page = async ({params} : ImageDetailPageProp) => {
   
   return(
     <div>
-       <section className="">
+       <section className="p-4">
           <Link href="/collections">
-              <button className='flex '>
+              <button className='flex justify-center items-center gap-2 text-black'>  
                 <ArrowLeft className='w-4 h-4 mr-2' />
                 Back to Gallery
               </button>
