@@ -31,9 +31,9 @@ const Page = async ({params} : ImageDetailPageProp) => {
               </button>
           </Link>
        </section>
-       <section className="flex flex-cols gap-14 md:flex-row md:w-[80%] m-auto my-16">
+       <section className="flex flex-col w-full p-2 gap-14 md:flex-row md:w-[80%] m-auto my-16">
           {image ? (
-            <div className='relative w-[50%] h-[100vh]'>
+            <div className='relative w-full md:w-[50%] h-[100vh]'>
                 <Image
                   src={image.src}
                   alt="Image"
@@ -47,9 +47,9 @@ const Page = async ({params} : ImageDetailPageProp) => {
             <p>Image not found</p>
           )}
           { image && (
-            <article className='w-[50%] flex flex-col gap-10 items-left'>
+            <article className='w-full md:w-[50%] flex flex-col gap-10 text-justify md:items-left '>
               <h1 className='font-medium text-2xl'>GTY-0<span>{image.id}</span></h1>
-              <p>{image.description}</p>
+              <p className="tracking-tighter">{image.description}</p>
               <Link href="/make-an-enquiry">
                   <button 
                     className='bg-black text-white p-2 w-[180px]'>
