@@ -3,6 +3,8 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { ArrowLeft } from 'lucide-react'
 import {images} from "../../lib/data"
+import RelatedItems from '@/app/Components/Collections/RelatedItems'
+import { getRelatedImages } from '@/app/lib/related_items'
 
 interface ImageDetailPageProp{
     params: {
@@ -20,6 +22,9 @@ const Page = async ({params} : ImageDetailPageProp) => {
   const image = await images.find((img) => img.id ==  param.id)
 
   console.log(image)
+
+  //Get related images based on the same category
+  const relatedImages = getRelatedImages(image, images)
   
   return(
     <div>
@@ -58,6 +63,12 @@ const Page = async ({params} : ImageDetailPageProp) => {
               </Link>
             </article>)}
        </section>
+
+        {/* Related Images Section */}
+        
+        {relatedImages.length > 0 &&
+         <RelatedItems currentImageId={image?.id} images={relatedImages} />
+        }
 
     </div>
   )
