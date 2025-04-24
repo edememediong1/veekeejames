@@ -5,23 +5,29 @@ import { ArrowLeft } from 'lucide-react'
 import {images} from "../../lib/data"
 import RelatedItems from '@/app/Components/Collections/RelatedItems'
 import { getRelatedImages } from '@/app/lib/related_items'
+import { notFound } from 'next/navigation'
 
-interface ImageDetailPageProp{
-    params: {
-      id: string
-    }
-}
+// type PageProps = {
+//     params: {
+//       id : string
+//     }
+//     searchParams?: Record<string, string | string[] | undefined>
+// }
 
 
 
-const Page = async ({params} : ImageDetailPageProp) => {
+export default async function Page ({params} : {params: Promise<{id: string}>}) {
 
-  const param = await params
+  const {id} = await params
   // console.log(param)
   
-  const image = await images.find((img) => img.id ==  param.id)
+  const image = images.find((img) => img.id ==  id)
 
   console.log(image)
+
+  if (!image) {
+    return notFound()
+  }
 
   //Get related images based on the same category
   const relatedImages = getRelatedImages(image, images)
@@ -74,4 +80,3 @@ const Page = async ({params} : ImageDetailPageProp) => {
   )
 }
 
-export default Page

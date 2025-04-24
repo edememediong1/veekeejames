@@ -5,7 +5,7 @@ import type {dataType} from "../../lib/data"
 
 
 interface RelatedImagesProps {
-  currentImageId?: string,
+  currentImageId : string,
   images: dataType[]
 }
 
@@ -22,7 +22,7 @@ const RelatedItems = ({
 
   return (
     <div className='w-full md:w-[90%] m-auto p-3'>
-      <h2 className='mb-6 text-2xl font-semibold'>Related Images</h2>
+      <h2 className='mb-6 text-2xl font-semibold'>Related Collections</h2>
       <div className='grid grid-cols-1 gap-6 pb-4 overflow-x-auto sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4'>
           {images.map ((image) => (
             <Link key={image.id} href={`/images/${image.id}`}>
