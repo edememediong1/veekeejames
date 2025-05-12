@@ -1,26 +1,35 @@
-
 import Image from "next/image"
+import carouselOne from '../../assets/carousel1.jpg'
+import carouselTwo from '../../assets/carousel2.jpg'
+import carouselThree from '../../assets/carousel3.jpg'
+import headshot from '../../assets/headshot.jpg'
+import heroshot from '../../assets/heroshot.jpg'
+import tradbride from '../../assets/trad_bride.jpg'
 
 const images = [
     {
-        src : "https://veekeejames.com/wp-content/uploads/2022/12/IMG_8615-2.jpg",
+        src : carouselOne,
         alt : "Image 1"
     },
     {
-        src : "https://veekeejames.com/wp-content/uploads/2022/12/IMG_8615-2.jpg",
+        src : carouselTwo,
         alt : "Image 2"
     },
     {
-        src : "https://veekeejames.com/wp-content/uploads/2022/12/IMG_8615-2.jpg",
+        src : carouselThree,
         alt : "Image 3"
     },
     {
-        src : "https://veekeejames.com/wp-content/uploads/2022/12/IMG_8615-2.jpg",
+        src : heroshot,
         alt : "Image 4"
     },
     {
-        src : "https://veekeejames.com/wp-content/uploads/2022/12/IMG_8615-2.jpg",
+        src : headshot,
         alt : "Image 5"
+    },
+        {
+        src : tradbride,
+        alt : "Image 6"
     }
 ]
 

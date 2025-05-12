@@ -9,11 +9,17 @@ const Footer = () => {
   return (
     <footer className='flex flex-col md:gap-5 md:justify-start lg:flex-row w-full lg:justify-around   bg-black text-white p-7 gap-10 text-[13px]'>
         <ul className="flex flex-col md:flex-row gap-4 ">
-            <li className='border-b py-2 md:border-none'>About us</li>
-            <li className='border-b py-2 md:border-none'>Bridal collection</li>
-            <li className='border-b py-2 md:border-none'>Book an appointment</li>
-            <li className='border-b py-2 md:border-none'>Make an Enquiry</li>
-            <li className='border-b py-2 md:border-none'>Contact us</li>
+            <li className='border-b py-2 md:border-none'>
+                <Link href='/about-us'>About Us</Link>
+            </li>
+            <li className='border-b py-2 md:border-none'>
+                <Link href='/collection'>Bridal Collection</Link>
+            </li>
+            <li className='border-b py-2 md:border-none'>
+                <Link href='/make-an-enquiry'>Book an Appointment</Link>
+            </li>
+            <li className='border-b py-2 md:border-none'>
+                <Link href='/contact'>Contact Us</Link></li>
 
         </ul>
         <section className='flex flex-col md:flex-col lg-flex gap-5'>

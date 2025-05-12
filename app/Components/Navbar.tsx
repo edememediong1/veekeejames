@@ -1,6 +1,6 @@
 'use client'
 import React from 'react'
-import logo from "../../public/dolce-gabbana-1.svg"
+import logo from "../assets/flora_logo.png"
 import Image from 'next/image'
 import Link from 'next/link'
 import { useState } from 'react'
@@ -104,7 +104,7 @@ const Navbar = () => {
             
             {/* Logo */}
             <Link href="/">
-                <Image src={logo} alt="Logo" className='w-[150px] md:w-[200px] '/>
+                <Image src={logo} alt="Logo" className='w-[100px] md:w-[120px] '/>
             </Link>
 
             {/* Desktop Menu */}

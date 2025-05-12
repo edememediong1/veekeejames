@@ -2,27 +2,37 @@
 
 import { useState } from "react"
 import Slider from "react-slick"
-import Image from "next/image"
+import Image, { StaticImageData } from "next/image"
 import { X } from "lucide-react"
 // Import the correct CSS files for react-slick
 import "slick-carousel/slick/slick.css"
 import "slick-carousel/slick/slick-theme.css"
+import carouselOne from "../../assets/carousel1.jpg"
+import carouselTwo from "../../assets/carousel2.jpg"
+import carouselThree from "../../assets/carousel3.jpg"
+import carouselFour from "../../assets/e_classic.jpg"
 
-const images = [
+
+interface images {
+  src: StaticImageData
+  alt: string
+}
+
+const images:images[] = [
   {
-    src: "https://veekeejames.com/wp-content/uploads/2023/12/Vj-picture-1-1.jpg",
+    src: carouselOne,
     alt: "Image 1",
   },
   {
-    src: "https://veekeejames.com/wp-content/uploads/2023/12/Vj-website-1.jpg",
+    src: carouselTwo,
     alt: "Image 2",
   },
   {
-    src: "https://veekeejames.com/wp-content/uploads/2023/12/Vj-website-4-1.jpg",
+    src: carouselThree,
     alt: "Image 3",
   },
   {
-    src: "https://veekeejames.com/wp-content/uploads/2023/12/C5BD7B0A-7C95-464C-94C4-3F1237C5CDCA-1.jpg",
+    src: carouselFour,
     alt: "Image 4",
   },
 ]
