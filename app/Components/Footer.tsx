@@ -1,10 +1,10 @@
 'use client'
 import Link from 'next/link'
 import Image from 'next/image'
-import facebook from '../../public/facebook.svg'
-import whatsapp from '../../public/whatsapp.svg'
-import twitter from '../../public/twitter.svg'
-import instagram from '../../public/instagram.svg'
+// import facebook from '../../public/facebook.svg'
+// import whatsapp from '../../public/whatsapp.svg'
+// import twitter from '../../public/twitter.svg'
+// import instagram from '../../public/instagram.svg'
 // import { Facebook, PhoneIcon as Whatsapp } from 'lucide-react'
 
 const Footer = () => {
@@ -28,16 +28,16 @@ const Footer = () => {
             <p>&copy;2025 Flora Fashions</p>
             <span className='flex gap-3'>
                 <Link href="">
-                    <Image src={facebook} alt="facebook logo" width={18} height={18} className=''/>
+                    <Image src='facebook.svg' alt="facebook logo" width={18} height={18} className=''/>
                 </Link>
                 <Link href="">
-                    <Image src={whatsapp} alt="whatsapp logo" width={18} height={18} className=''/>
+                    <Image src='whatsapp.svg' alt="whatsapp logo" width={18} height={18} className=''/>
                 </Link>
                 <Link href="">
-                    <Image src={twitter} alt="twitter logo" width={18} height={18} className=''/>
+                    <Image src='twitter.svg' alt="twitter logo" width={18} height={18} className=''/>
                 </Link>
                 <Link href="">
-                    <Image src={instagram} alt="twitter logo" width={18} height={18} className=''/>
+                    <Image src='instagram.svg' alt="twitter logo" width={18} height={18} className=''/>
                 </Link>
             </span>
         </section>
