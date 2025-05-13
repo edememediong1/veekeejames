@@ -81,10 +81,10 @@ const Navbar = () => {
         setMenuActive( menuActive== false ? true: false)
     }
   return (
-    <nav className='h-[15vh] flex gap-10 bg-[#fff9f2] w-full  justify-start md:justify-center items-center md:h-[20vh]'>
+    <nav className='h-[15vh] flex gap-10 bg-[#fff9f2] w-full  justify-start md:justify-center items-center md:h-[22vh]'>
         
         <div className=' md:hidden relative '>
-            <button>
+            <button className='p-2'>
                 {menuActive ? <X onClick={handleToggle} className='h-6 w-6'/> : <Menu onClick={handleToggle} className='h-6 w-6'/>}
             </button>
             {menuActive && (
@@ -100,7 +100,7 @@ const Navbar = () => {
         </div>
         
 
-        <div className=' md:flex md:flex-col md:justify-center md:items-center md:gap-6'>
+        <div className=' md:flex md:flex-col md:justify-center md:items-center md:gap-3'>
             
             {/* Logo */}
             <Link href="/">
