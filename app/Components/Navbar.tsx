@@ -27,7 +27,7 @@ const navItems: NavItem[] = [
             href: "#",
             children: [
                 {
-                    title: "THE GUTSY COLLECTION LOOKBOOK",
+                    title: "THE ONYX COLLECTION LOOKBOOK",
                     href: "/collections"
                 }
             ]

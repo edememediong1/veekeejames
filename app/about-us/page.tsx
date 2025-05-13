@@ -6,6 +6,7 @@ import headshot from '../assets/headshot.jpg'
 import tradbride from "../assets/trad_bride.jpg"
 
 
+
 const Page = () => {
   return (
     <main>
@@ -23,25 +24,25 @@ const Page = () => {
             </article>
         </div>
         <div className='w-full md:h-[80vh] my-20'>
-            <article className='md:w-[80%] lg:w-[62%] m-auto h-full text-white grid grid-cols-1 md:grid-cols-6 md:grid-rows-3 gap-3 p-3'>
+            <article className='md:w-[80%] lg:w-[67%] m-auto h-full text-white grid grid-cols-1 md:grid-cols-6 md:grid-rows-3 gap-3 p-3'>
                 <div className='bg-black md:row-span-2 md:rounded-lg flex flex-col justify-center text-center md:h-auto h-[50vh]'>
-                    <h2 className='font-medium text-4xl lg:text-6xl'>10+</h2>
+                    <h2 className='font-medium text-3xl lg:text-5xl'>10+</h2>
                     <p className='font-medium text-[20px]'>Years in Business</p>
                 </div>
-                <div className='relative hidden md:flex bg-black md:col-span-3 md:row-span-3 md:rounded-lg md:h-auto h-[80vh] '>
-                    <Image src={headshot} alt="Image" className="transition-transform hover:scale-[1.02]" fill unoptimized />
+                <div className='relative  md:flex bg-black md:col-span-3 md:row-span-3 md:rounded-full md:h-auto h-[80vh] '>
+                    <Image src={headshot} alt="Image" className="transition-transform hover:scale-[1.02] md:rounded-lg" fill unoptimized />
                 </div>
-                <div className='relative hidden md:flex bg-black md:col-span-2 md:row-span-2 md:rounded-lg md:h-auto h-[80vh]'>
+                <div className='relative md:flex bg-black md:col-span-2 md:row-span-2 md:rounded-lg md:h-auto h-[80vh]'>
                     <Image src={heroshot} alt="Image" className="rounded-lg transition-transform hover:scale-[1.02]" fill unoptimized />
                 </div>
-                <div className='relative hidden md:flex bg-black md:rounded-lg md:h-auto h-[80vh]'>
+                <div className='relative md:flex bg-black md:rounded-lg md:h-auto h-[80vh]'>
                     <Image src={carouselThree} alt="Image" className="rounded-lg transition-transform hover:scale-[1.02]" fill unoptimized />
                 </div>
                 <div className='bg-black  flex md:rounded-lg p-3 text-center flex-col justify-center items-center transition-transform hover:scale-[1.02] h-[50vh] md:h-auto'>
                     <h2 className='font-medium text-3xl lg:text-4xl'>500+</h2>
                     <p className='font-medium text-[16px]'>Happy Customers</p>
                 </div>
-                <div className='relative hidden md:flex bg-black md:rounded-lg transition-transform hover:scale-[1.02] md:h-auto h-[80vh]'>
+                <div className='relative md:flex bg-black md:rounded-lg transition-transform hover:scale-[1.02] md:h-auto h-[80vh]'>
                     <Image src={tradbride} alt="Image" className="rounded-lg" fill unoptimized />
                 </div>
             </article>

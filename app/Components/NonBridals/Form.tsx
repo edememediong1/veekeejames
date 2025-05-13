@@ -1,9 +1,33 @@
-import React from 'react'
+'use client'
+
+import React,{ useRef, FormEvent} from 'react'
+import emailjs from '@emailjs/browser'
 
 
-const Form = () => {
+const Form : React.FC = () => {
+  const form = useRef<HTMLFormElement>(null);
+
+  const sendEmail = (e : FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+
+  if (form.current){
+    emailjs
+      .sendForm('service_dgbz3al','template_ttjp83r', form.current, {
+        publicKey: 'D9xm9cd9VBmlpU7QL'
+      })
+       .then(
+        () => {
+          console.log('SUCCESS!')
+        },
+        (error) => {
+          console.log('FAILED...', error.text)
+        }
+       )
+    }
+  }
+
   return (
-    <form className='flex flex-col gap-5 w-full md:w-4/5 p-5 text-[13px] md:text-[1rem]'>
+    <form ref={form} onSubmit={sendEmail} className='flex flex-col gap-5 w-full md:w-4/5 p-5 text-[13px] md:text-[1rem]'>
         <div className='flex flex-col gap-2'>
             <label htmlFor="name" className='font-bold'>Name<span className='text-red-600'>*</span></label>
             <input type='text' name="name" placeholder='Flora Gadus'  className='border p-2'/>
