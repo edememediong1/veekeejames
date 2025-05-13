@@ -1,28 +1,57 @@
 'use client'
 
-import React,{ useRef, FormEvent} from 'react'
+import React,{ useRef, FormEvent, useState} from 'react'
 import emailjs from '@emailjs/browser'
+// import { Key } from 'lucide-react';
 
 
 const Form : React.FC = () => {
   const form = useRef<HTMLFormElement>(null);
+  const [isSubmitting, setIsSubmitting] = useState<boolean>(false);
+  const [submitStatus, setSubmitStatus] = useState<{
+    success: boolean;
+    message: string;
+  } | null>(null);
 
   const sendEmail = (e : FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    setIsSubmitting(true);
+    setSubmitStatus(null)
+
+
 
   if (form.current){
+    // Log the form data to debug what's being sent 
+    const formData = new FormData(form.current);
+    console.log('Form data being sent:')
+
+    formData.forEach((value, key) => {
+      console.log(`${key}: ${value}`)
+    }) 
+
     emailjs
-      .sendForm('service_dgbz3al','template_ttjp83r', form.current, {
+      .sendForm(
+        'service_dgbz3al',
+        'template_ttjp83r', 
+        form.current, {
         publicKey: 'D9xm9cd9VBmlpU7QL'
       })
        .then(
-        () => {
-          console.log('SUCCESS!')
+        (result) => {
+          console.log('SUCCESS!', result.text);
+          setSubmitStatus({
+            success: true,
+            message: 'Your message has been sent successfully '
+          })
+
         },
         (error) => {
           console.log('FAILED...', error.text)
         }
        )
+       .finally(() => {
+          setIsSubmitting(false)
+       })
     }
   }
 
@@ -86,7 +115,17 @@ const Form : React.FC = () => {
         </div>
 
         <button type='submit' className='p-2 border w-[100px] bg-[#ebe9e9]'>Submit</button>
+        {isSubmitting && (
+          <div className='p-4 mb-4 rounded bg-[#FFF2E3] text-[#df9744]'>
+             Submitting...
+          </div>
+        )}
 
+        {submitStatus && (
+          <div className={`p-4 mb-4 rounded ${submitStatus.success ? 'bg-green-100 text-green-800' : 'bg-red-100 text-red-800'}`}>
+            {submitStatus.message}
+          </div>
+        )}
     </form>
   )
 }
