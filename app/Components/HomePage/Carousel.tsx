@@ -14,7 +14,7 @@ import carouselFour from "../../assets/e_classic.jpg"
 
 
 interface images {
-  src: StaticImageData
+  src: StaticImageData;
   alt: string
 }
 
@@ -38,7 +38,7 @@ const images:images[] = [
 ]
 
 const Carousel = () => {
-  const [fullscreenImage, setFullscreenImage] = useState<string | null>(null)
+  const [fullscreenImage, setFullscreenImage] = useState<StaticImageData | null>(null)
 
   const settings = {
     dots: true,
@@ -80,7 +80,7 @@ const Carousel = () => {
     ],
   }
 
-  const openFullscreen = (src: string) => {
+  const openFullscreen = (src: StaticImageData) => {
     setFullscreenImage(src)
     document.body.style.overflow = "hidden"
   }

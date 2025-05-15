@@ -163,7 +163,7 @@ function DropdownItem({item}: {item: NavItem}) {
                 {item.title}
                 <ChevronRight className='ml-2 h-3 w-3'/>
             </button>
-            <div className="absolute left-full top-0 z-20 hidden min-w-[200px] border bg-[#fff9f2] group-hover/nested:block py-2">
+            <div className="absolute left-full top-0 z-30 hidden min-w-[200px] border bg-[#fff9f2] group-hover/nested:block py-2">
                 {item.children.map((child) => (
                     <Link key={child.title} href={child.href} className="block px-3 py-2 text-[12px] text-gray-700">
                         {child.title}
