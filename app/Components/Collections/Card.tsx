@@ -30,7 +30,7 @@ const Card = ({image} : ImageCardProps) => {
             </div>
           </Link>
           <div className="flex justify-between items-center mt-2">
-            <h2>GTY-<span>0{image.id}</span></h2>
+            <h2>FLORA-<span>0{image.id}</span></h2>
               <HeartIcon className={`${isLiked && 'fill-black'}`} onClick={handleClick} width={20}/>
           </div>
       </div>

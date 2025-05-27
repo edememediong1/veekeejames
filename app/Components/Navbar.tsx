@@ -88,7 +88,7 @@ const Navbar = () => {
                 {menuActive ? <X onClick={handleToggle} className='h-6 w-6'/> : <Menu onClick={handleToggle} className='h-6 w-6'/>}
             </button>
             {menuActive && (
-                <ul className='absolute w-screen z-50 bg-[#fff9f2] text-[13px] px-4 py-4 border-t mt-3.5'>
+                <ul className='absolute w-screen z-10 bg-[#fff9f2] text-[13px] px-4 py-4 border-t mt-3.5'>
                    <li>
                     {navItems.map((item) => (
                         <NavItemMobile key={item.title} item={item} />
@@ -108,7 +108,7 @@ const Navbar = () => {
             </Link>
 
             {/* Desktop Menu */}
-            <ul className='hidden md:flex space-x-5 font-semibold text-[14px] text-[#353535]'>
+            <ul className='hidden md:flex  z-50 space-x-5 font-semibold text-[14px] text-[#353535]'>
                 <li className='flex gap-5'>
                     {navItems.map((item) => (
                         <NavItemDesktop key={item.title} item={item} />
@@ -158,7 +158,7 @@ function DropdownItem({item}: {item: NavItem}) {
     }
 
     return (
-        <div className="group/nested relative">
+        <div className="group/nested relative z-50">
             <button className="flex w-full items-center justify-between rounded-md px-4 py-2 text-[12px]">
                 {item.title}
                 <ChevronRight className='ml-2 h-3 w-3'/>

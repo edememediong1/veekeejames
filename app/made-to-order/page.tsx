@@ -11,20 +11,26 @@ const page = () => {
             <article className='w-full p-3 md:w-[80%] m-auto flex flex-col gap-6 items-start leading-8 font-medium text-justify my-20 tracking-tighter'>
                 <h1 className='text-3xl md:text-4xl'>THE PROCESS</h1>
                 <p>
-                    Brides may choose a design from our incredible (Gutsy) collection. Dresses will be made with your exact measurements that can be taken at our office or sent to us using our measurement guide.    
+                    Brides may choose a design from our incredible Onyx collection. Dresses will be made with your exact measurements that can be taken at our office or sent to us using our measurement guide.    
                 </p>
                 <p>
-                    This consultation can be held physically in our Lagos office or virtually for clients abroad. The client is then invoiced, measured and receives a sketch that directs the production of the dress (International client receive a detailed guide to help take their measurements accurately).
+                    This consultation can be held physically in our Abuja office or virtually for clients abroad. The client is then invoiced, measured and receives a sketch that directs the production of the dress (International client receive a detailed guide to help take their measurements accurately).
                 </p>
                 <p>
-                    It is important to note that ninety percent of our clients never get to meet us physically for consultations or fittings but receive the same quality experiences and outcomes  
+                    It is important to note that Sixty percent of our clients never get to meet us physically for consultations or fittings but receive the same quality experiences and outcomes  
                 </p>
                 
                 <p>
-                    The ideal order-processing timeframe for bridal dresses is six (6) months from the consultation date
-                    You are allowed to invite a maximum of three loved ones for your consultation.
+                    The ideal order-processing timeframe for bridal dresses is four months from the consultation date
+                    You are allowed to invite a maximum of five loved ones for your consultation.
                     You may make a request for an express order by filling the “Make an enquiry form” and we will get in touch with you about the possibilities.
                 </p>
+
+                <p>
+                    We also make evening dresses, suits and other bespoke outfits. The process is similar to that of bridal dresses.
+                </p>
+
+                <p className='font-medium'>What are you waiting for? </p>
 
                 <Link href="/make-an-enquiry">
                     <button className='border py-1 px-2 border-black bg-slate-50'>

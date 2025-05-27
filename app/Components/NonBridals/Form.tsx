@@ -59,7 +59,7 @@ const Form : React.FC = () => {
     <form ref={form} onSubmit={sendEmail} className='flex flex-col gap-5 w-full md:w-4/5 p-5 text-[13px] md:text-[1rem]'>
         <div className='flex flex-col gap-2'>
             <label htmlFor="name" className='font-bold'>Name<span className='text-red-600'>*</span></label>
-            <input type='text' name="name" placeholder='Flora Gadus'  className='border p-2'/>
+            <input type='text' name="name" placeholder='Adigwe Flora'  className='border p-2'/>
         </div>
 
         <div className='flex flex-col gap-2'>
@@ -105,7 +105,7 @@ const Form : React.FC = () => {
         </div>
 
         <div className='flex flex-col gap-2'>
-          <label htmlFor="address" className='font-bold'>Full delivery address if shipping is required, please make sure to indicate your city and country *(Just type Lagos if you are picking up)* <span className='text-red-500'>*</span></label>
+          <label htmlFor="address" className='font-bold'>Full delivery address if shipping is required, please make sure to indicate your city and country *(Just type Abuja if you are picking up)* <span className='text-red-500'>*</span></label>
           <input type="text" id='address' name='address' className='border p-2'/>
         </div>
 

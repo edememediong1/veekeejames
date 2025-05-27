@@ -44,11 +44,11 @@ export default async function Page ({params} : {params: Promise<{id: string}>}) 
        </section>
        <section className="flex flex-col w-full p-2 gap-14 md:flex-row md:w-[80%] m-auto my-16">
           {image ? (
-            <div className='relative w-full md:w-[50%] h-[100vh]'>
+            <div className='relative w-full md:w-[50%] h-[90vh] sm:h-[100vh]'>
                 <Image
                   src={image.src}
                   alt="Image"
-                  className='w-full '
+                  className='w-full h-full object-cover'
                   fill
                   unoptimized
                   
@@ -59,7 +59,7 @@ export default async function Page ({params} : {params: Promise<{id: string}>}) 
           )}
           { image && (
             <article className='w-full md:w-[50%] flex flex-col gap-10 text-justify md:items-left '>
-              <h1 className='font-medium text-2xl'>GTY-0<span>{image.id}</span></h1>
+              <h1 className='font-medium text-2xl'>FLORA-0<span>{image.id}</span></h1>
               <p className="tracking-tighter">{image.description}</p>
               <Link href="/make-an-enquiry">
                   <button 
