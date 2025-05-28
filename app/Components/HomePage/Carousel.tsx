@@ -92,7 +92,7 @@ const Carousel = () => {
 
   return (
     <article className="my-10">
-      <h2 className="text-[1.9rem] font-medium text-center">BESPOKE WEARS FOR ANY OCCASSION</h2>
+      <h2 className=" text-2xl md:text-[1.9rem] font-medium text-center">BESPOKE WEARS FOR ANY OCCASSION</h2>
       <div className=" w-[100%] md:w-[95%] px-4 mt-5 m-auto">
       <Slider {...settings} className="mb-8">
         {images.map((image, index) => (
@@ -123,7 +123,7 @@ const Carousel = () => {
               e.stopPropagation()
               closeFullscreen()
             }}
-            className="absolute top-4 right-4 text-white p-2 rounded-full bg-black bg-opacity-50 hover:bg-opacity-70 transition-colors"
+            className="absolute top-4 right-4 z-30 text-white p-2 rounded-full bg-black bg-opacity-50 hover:bg-opacity-70 transition-colors"
             aria-label="Close fullscreen view"
           >
             <X size={24} />
