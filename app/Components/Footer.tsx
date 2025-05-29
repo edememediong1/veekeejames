@@ -18,7 +18,7 @@ const Footer = () => {
                 <Link href='/about-us'>About Us</Link>
             </li>
             <li className='border-b border-[#4f4f4f] py-2 md:border-none'>
-                <Link href='/collection'>Bridal Collection</Link>
+                <Link href='/collections'>Bridal Collection</Link>
             </li>
             <li className='border-b border-[#4f4f4f] py-2 md:border-none'>
                 <Link href='/make-an-enquiry'>Book an Appointment</Link>
@@ -28,7 +28,7 @@ const Footer = () => {
 
         </ul>
         <section className='flex flex-col md:flex-col lg:flex-row gap-5 lg:gap-12'>
-            <p>&copy; 2025 Flora Fashions</p>
+            <p>&copy; {Date()} LuxuryByFlora</p>
             <span className='flex gap-3'>
                 <Link  href="https://www.facebook.com/share/1ByT26Q4HV/?mibextid=wwXIfr" target='_blank'>
                     <Image src='facebook.svg' alt="facebook logo" width={18} height={18} className='text-[#4f4f4f]'/>
