@@ -11,6 +11,9 @@ import carouselOne from "../../assets/carousel1.jpg"
 import carouselTwo from "../../assets/carousel2.jpg"
 import carouselThree from "../../assets/carousel3.jpg"
 import carouselFour from "../../assets/e_classic.jpg"
+import red_bride_full from "../../assets/red_bride_full.jpg"
+import flora_wedding_big from "../../assets/flora_wedding_big.jpg"
+import bold_black from "../../assets/black_bold.jpg"
 
 
 interface images {
@@ -35,6 +38,18 @@ const images:images[] = [
     src: carouselFour,
     alt: "Image 4",
   },
+  {
+    src: red_bride_full,
+    alt: "Image 5",
+  },
+  {
+    src: flora_wedding_big,
+    alt: "Image 6",
+  },
+  {
+    src: bold_black,
+    alt: "Image 7",
+  }
 ]
 
 const Carousel = () => {
@@ -44,7 +59,7 @@ const Carousel = () => {
     dots: true,
     infinite: true,
     autoplay: true,
-    speed: 200,
+    speed: 1000,
     slidesToShow: 4,
     slidesToScroll: 1,
     cssEase: "linear",
