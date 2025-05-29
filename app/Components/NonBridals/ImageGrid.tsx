@@ -4,7 +4,7 @@ import carouselTwo from '../../assets/carousel2.jpg'
 import carouselThree from '../../assets/carousel3.jpg'
 import headshot from '../../assets/headshot.jpg'
 import heroshot from '../../assets/heroshot.jpg'
-import tradbride from '../../assets/trad_bride.jpg'
+import black_bold from '../../assets/black_bold.jpg'
 
 const images = [
     {
@@ -27,8 +27,8 @@ const images = [
         src : headshot,
         alt : "Image 5"
     },
-        {
-        src : tradbride,
+    {
+        src : black_bold,
         alt : "Image 6"
     }
 ]
