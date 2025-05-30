@@ -12,7 +12,7 @@ const Hero = () => {
             <article className="absolute flex flex-col justify-center items-center w-[80%] md:w-[50%] gap-10 mb-10">
                 <h2 className="text-4xl text-center md:text-[3rem] leading-snug">ELEVATE YOUR ELEGANCE</h2>
                 <button className='hidden lg:flex md:text-[14px] md:p-3 md:bg-white text-black uppercase font-semibold'>
-                    <Link href="">View Collection</Link>
+                    <Link href="/collections">View Collection</Link>
                 </button>
             </article>
         </section>
