@@ -26,7 +26,7 @@ const Hero = () => {
             <article className=" absolute ml-12 flex flex-col justify-center items-start w-[90%] md:w-[50%] lg:w-[40%]  gap-10 mb-10">
                 <h2 className="text-3xl  md:text-[3rem] uppercase leading-snug">Make an enquiry today</h2>
                 <button className=' bg-black p-3 border text-[14px] md:p-3 md:text-[18px] text-white uppercase font-semibold '>
-                    <Link href="/make-an-equiry">Discover More</Link>
+                    <Link href="/make-an-enquiry">Discover More</Link>
                 </button>
             </article>
         </section>
