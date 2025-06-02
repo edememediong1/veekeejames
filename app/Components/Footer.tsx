@@ -26,13 +26,13 @@ const Footer = () => {
         <section className='flex flex-col md:flex-col lg:flex-row gap-5 lg:gap-12'>
             <p>&copy; {new Date().getFullYear()} LUXURY BY FLORA</p>
             <span className='flex gap-3'>
-                <Link  href="https://www.facebook.com/share/1ByT26Q4HV/?mibextid=wwXIfr" target='_blank'>
+                <Link  href="https://www.facebook.com/share/1ByT26Q4HV/?mibextid=wwXIfr" target='_blank' className='cursor-pointer'>
                     <Image src='facebook.svg' alt="facebook logo" width={18} height={18} className='text-[#4f4f4f]'/>
                 </Link>
-                <Link href={whatsappLink} target="_blank" rel="noopener noreferrer">
+                <Link href={whatsappLink} target="_blank" rel="noopener noreferrer" className='cursor-pointer'>
                     <Image src='whatsapp.svg' alt="whatsapp logo" width={18} height={18} className=''/>
                 </Link>
-                <Link href="https://www.instagram.com/luxurybyflora_rtw?igsh=N2kzMDNqd3c3YnU%3D&utm_source=qr" target='_blank'>
+                <Link href="https://www.instagram.com/luxurybyflora_rtw?igsh=N2kzMDNqd3c3YnU%3D&utm_source=qr" target='_blank' className='cursor-pointer'>
                     <Image src='instagram.svg' alt="instagram logo" width={18} height={18} className=''/>
                 </Link>
             </span>
